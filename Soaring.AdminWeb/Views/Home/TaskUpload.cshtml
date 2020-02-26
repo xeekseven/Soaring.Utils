@@ -1,0 +1,29 @@
+@{ ViewData["Title"] = "Home Page"; Layout = "_MenuLayout"; }
+
+<div class="flex-column flex-main-start flex-align-center" style="width: 100%;height:auto;padding-left:1rem">
+    <div class="flex-column flex-main-start flex-align-center" style="width: 100%;">
+        <div class="flex-row flex-main-start flex-align-start" style="width: 100%;">
+            <h2>任务上传</h2>
+        </div>
+        <div class="hr"></div>
+        <div style="margin: 3rem 0;width: 100%;text-align:center"> 
+            <h4>选择xoml文件</h4>
+        </div>
+        <form enctype="multipart/form-data" method="post" action="/home/upload" class="task-upload-form flex-column flex-main-start flex-align-center">
+            <div class="flex-row flex-main-start flex-align-center">
+                <span>输入任务名：</span>
+                <input class="form-control" name="TaskName" placeholder="taskName">
+            </div>
+            <div class="flex-row flex-main-start flex-align-center">
+                <span>选择xoml：</span>
+                <input type="file" placeholder="选择xoml文件" name="TaskFiles" accept=".xml">
+            </div>
+            <div class="flex-row flex-main-end">
+                <input type="submit" class="btn btn-primary" value="上传"></button>
+            </div>
+        </form>
+    </div>
+    <div>
+
+    </div>
+</div>
